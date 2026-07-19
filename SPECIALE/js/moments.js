@@ -120,11 +120,9 @@ if (wall) {
     ];
 
     const CARD_HEIGHT = 300;
-   const START_X = window.innerWidth < 600 ? 20 : 70;
-
-const COLUMN_GAP = window.innerWidth < 600 ? 150 : 270;
-
-const START_Y = 40;
+    const START_X = 70;
+    const COLUMN_GAP = 270;
+    const START_Y = 60;
 
     columns.forEach((indexes, columnIndex) => {
 
