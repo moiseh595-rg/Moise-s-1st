@@ -1,48 +1,35 @@
-
 /* ==========================================
    FLOATING HEARTS
 ========================================== */
 
-const heartContainer=document.body;
+const heartContainer = document.body;
 
-function createHeart(){
+function createHeart() {
+  const heart = document.createElement("span");
 
-    const heart=document.createElement("span");
+  heart.innerHTML = "❤";
 
-    heart.innerHTML="❤";
+  heart.classList.add("floating-heart");
 
-    heart.classList.add("floating-heart");
+  heart.style.left = Math.random() * 100 + "vw";
 
-    heart.style.left=Math.random()*100+"vw";
+  heart.style.animationDuration = 5 + Math.random() * 5 + "s";
 
-    heart.style.animationDuration=
+  heart.style.fontSize = 12 + Math.random() * 24 + "px";
 
-    5+Math.random()*5+"s";
+  heartContainer.appendChild(heart);
 
-    heart.style.fontSize=
-
-    12+Math.random()*24+"px";
-
-    heartContainer.appendChild(heart);
-
-    setTimeout(()=>{
-
-        heart.remove();
-
-    },10000);
-
+  setTimeout(() => {
+    heart.remove();
+  }, 10000);
 }
 
-setInterval(createHeart,500);
+setInterval(createHeart, 500);
 
 /* ==========================================
    PARALLAX
 ========================================== */
 
-window.addEventListener("mousemove",e=>{
-
-    document.body.style.backgroundPosition=
-
-    `${e.clientX/40}px ${e.clientY/40}px`;
-
+window.addEventListener("mousemove", (e) => {
+  document.body.style.backgroundPosition = `${e.clientX / 40}px ${e.clientY / 40}px`;
 });

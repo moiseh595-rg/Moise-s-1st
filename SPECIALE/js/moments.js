@@ -3,30 +3,27 @@
 ========================================== */
 
 const momentItems = [
+  { type: "image", src: "images/moment1.webp" },
+  { type: "image", src: "images/moment2.webp" },
+  { type: "image", src: "images/moment3.webp" },
+  { type: "image", src: "images/moment4.webp" },
+  { type: "image", src: "images/moment5.webp" },
+  { type: "image", src: "images/moment6.webp" },
+  { type: "image", src: "images/moment7.webp" },
+  { type: "image", src: "images/moment8.webp" },
+  { type: "image", src: "images/moment9.webp" },
+  { type: "image", src: "images/moment10.webp" },
+  { type: "image", src: "images/moment11.webp" },
 
-    { type:"image", src:"images/moment1.webp" },
-    { type:"image", src:"images/moment2.webp" },
-    { type:"image", src:"images/moment3.webp" },
-    { type:"image", src:"images/moment4.webp" },
-    { type:"image", src:"images/moment5.webp" },
-    { type:"image", src:"images/moment6.webp" },
-    { type:"image", src:"images/moment7.webp" },
-    { type:"image", src:"images/moment8.webp" },
-    { type:"image", src:"images/moment9.webp" },
-    { type:"image", src:"images/moment10.webp" },
-    { type:"image", src:"images/moment11.webp" },
-
-    { type:"video", src:"videos/moment-video1.mp4" },
-    { type:"video", src:"videos/moment-video2.mp4" },
-    { type:"video", src:"videos/moment-video3.mp4" }
-
+  { type: "video", src: "videos/moment-video1.mp4" },
+  { type: "video", src: "videos/moment-video2.mp4" },
+  { type: "video", src: "videos/moment-video3.mp4" },
 ];
 
 const momentsSection = document.getElementById("moments");
 
-if(momentsSection){
-
-    momentsSection.innerHTML = `
+if (momentsSection) {
+  momentsSection.innerHTML = `
 
     <div class="page-content">
 
@@ -44,11 +41,10 @@ if(momentsSection){
 
         <div class="moments-wall">
 
-            ${momentItems.map((item,index)=>{
-
-                if(item.type==="image"){
-
-                    return `
+            ${momentItems
+              .map((item, index) => {
+                if (item.type === "image") {
+                  return `
 
                   <div class="moment-card"
                   style="
@@ -58,13 +54,12 @@ if(momentsSection){
 
                         <img
                             src="${item.src}"
-                            alt="Memory ${index+1}"
+                            alt="Memory ${index + 1}"
                             loading="lazy">
 
                     </div>
 
                     `;
-
                 }
 
                 return `
@@ -89,15 +84,14 @@ if(momentsSection){
                 </div>
 
                 `;
-
-            }).join("")}
+              })
+              .join("")}
 
         </div>
 
     </div>
 
     `;
-
 }
 
 /* ==========================================
@@ -107,41 +101,30 @@ if(momentsSection){
 const wall = document.querySelector(".moments-wall");
 
 if (wall) {
+  const cards = [...wall.querySelectorAll(".moment-card")];
 
-    const cards = [...wall.querySelectorAll(".moment-card")];
-
-    /* ==========================================
+  /* ==========================================
        MOBILE MODE
     ========================================== */
 
-    if(window.innerWidth <= 768){
+  if (window.innerWidth <= 768) {
+    cards.forEach((card) => {
+      card.style.position = "relative";
 
-        cards.forEach(card=>{
+      card.style.left = "auto";
 
-            card.style.position="relative";
+      card.style.top = "auto";
 
-            card.style.left="auto";
+      card.style.transform = "none";
+    });
 
-            card.style.top="auto";
-
-            card.style.transform="none";
-
-        });
-
-
-        wall.style.height="auto";
-
-    }
-    else {
-
-
+    wall.style.height = "auto";
+  } else {
     const columns = [
-
-        [0,4,8,12], // column 1
-        [1,5,9,13], // column 2
-        [2,6,10],   // column 3
-        [3,7,11]    // column 4
-
+      [0, 4, 8, 12], // column 1
+      [1, 5, 9, 13], // column 2
+      [2, 6, 10], // column 3
+      [3, 7, 11], // column 4
     ];
 
     const CARD_HEIGHT = 300;
@@ -150,82 +133,57 @@ if (wall) {
     const START_Y = 60;
 
     columns.forEach((indexes, columnIndex) => {
+      const direction =
+        columnIndex === 0 || columnIndex === 2
+          ? -1 // columns 1 & 3 move UP
+          : 1; // columns 2 & 4 move DOWN
 
-        const direction =
-            (columnIndex === 0 || columnIndex === 2)
-            ? -1     // columns 1 & 3 move UP
-            : 1;     // columns 2 & 4 move DOWN
+      const columnCards = indexes.map((i) => cards[i]).filter(Boolean);
 
-        const columnCards =
-            indexes.map(i => cards[i]).filter(Boolean);
+      // Initial positions
+      columnCards.forEach((card, row) => {
+        card.style.position = "absolute";
 
-        // Initial positions
-        columnCards.forEach((card, row) => {
+        card.style.left = `${START_X + columnIndex * COLUMN_GAP}px`;
 
-            card.style.position = "absolute";
+        card.style.top = `${START_Y + row * CARD_HEIGHT}px`;
+      });
 
-            card.style.left =
-                `${START_X + columnIndex * COLUMN_GAP}px`;
+      setInterval(() => {
+        // Animate every card
+        columnCards.forEach((card) => {
+          const current = parseFloat(card.style.top);
 
-            card.style.top =
-                `${START_Y + row * CARD_HEIGHT}px`;
+          card.style.transition = "top 0.9s ease";
 
+          card.style.top = `${current + direction * CARD_HEIGHT}px`;
         });
 
-        setInterval(() => {
+        // After animation finishes
+        setTimeout(() => {
+          if (direction === -1) {
+            // UP
 
-            // Animate every card
-            columnCards.forEach(card => {
+            const first = columnCards.shift();
 
-                const current =
-                    parseFloat(card.style.top);
+            first.style.transition = "none";
 
-                card.style.transition =
-                    "top 0.9s ease";
+            first.style.top = `${START_Y + columnCards.length * CARD_HEIGHT}px`;
 
-                card.style.top =
-                    `${current + direction * CARD_HEIGHT}px`;
+            columnCards.push(first);
+          } else {
+            // DOWN
 
-            });
+            const last = columnCards.pop();
 
-            // After animation finishes
-            setTimeout(() => {
+            last.style.transition = "none";
 
-                if (direction === -1) {
+            last.style.top = `${START_Y - CARD_HEIGHT}px`;
 
-                    // UP
-
-                    const first =
-                        columnCards.shift();
-
-                    first.style.transition = "none";
-
-                    first.style.top =
-                        `${START_Y + (columnCards.length) * CARD_HEIGHT}px`;
-
-                    columnCards.push(first);
-
-                } else {
-
-                    // DOWN
-
-                    const last =
-                        columnCards.pop();
-
-                    last.style.transition = "none";
-
-                    last.style.top =
-                        `${START_Y - CARD_HEIGHT}px`;
-
-                    columnCards.unshift(last);
-
-                }
-
-            }, 900);
-
-        }, 2500);
-
+            columnCards.unshift(last);
+          }
+        }, 900);
+      }, 2500);
     });
-
-}
+  }
 }

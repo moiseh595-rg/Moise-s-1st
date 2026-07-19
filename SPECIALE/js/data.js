@@ -10,41 +10,37 @@ const relationshipDate = new Date("2024-08-01T00:00:00");
 // Rotating Quotes
 
 const quotes = [
+  "You are my favorite notification ❤️",
 
-"You are my favorite notification ❤️",
+  "I still fall for you every single day.",
 
-"I still fall for you every single day.",
+  "Home isn't a place anymore... it's you.",
 
-"Home isn't a place anymore... it's you.",
+  "I never knew forever could begin with one hello.",
 
-"I never knew forever could begin with one hello.",
+  "If I had another lifetime, I'd still choose you.",
 
-"If I had another lifetime, I'd still choose you.",
+  "You make ordinary moments unforgettable.",
 
-"You make ordinary moments unforgettable.",
-
-"Thank you for existing."
-
+  "Thank you for existing.",
 ];
 
 // Reasons
 
 const reasons = [
+  "Your smile",
 
-"Your smile",
+  "Your kindness",
 
-"Your kindness",
+  "Your laugh",
 
-"Your laugh",
+  "The way you care",
 
-"The way you care",
+  "The way you understand me",
 
-"The way you understand me",
+  "Your beautiful heart",
 
-"Your beautiful heart",
+  "The peace you bring me",
 
-"The peace you bring me",
-
-"Everything about you."
-
+  "Everything about you.",
 ];

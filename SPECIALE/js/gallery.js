@@ -3,34 +3,31 @@
 ========================================== */
 
 const photos = [
+  {
+    image: "images/photo1.webp",
+    caption: "The smile that changed my world.",
+  },
 
-    {
-        image:"images/photo1.webp",
-        caption:"The smile that changed my world."
-    },
+  {
+    image: "images/photo2.webp",
+    caption: "Every moment with you becomes a memory.",
+  },
 
-    {
-        image:"images/photo2.webp",
-        caption:"Every moment with you becomes a memory."
-    },
+  {
+    image: "images/photo3.webp",
+    caption: "You make happiness look effortless.",
+  },
 
-    {
-        image:"images/photo3.webp",
-        caption:"You make happiness look effortless."
-    },
-
-    {
-        image:"images/photo4.webp",
-        caption:"Forever starts with moments like these."
-    }
-
+  {
+    image: "images/photo4.webp",
+    caption: "Forever starts with moments like these.",
+  },
 ];
 
 const photoSection = document.getElementById("photos");
 
-if(photoSection){
-
-photoSection.innerHTML = `
+if (photoSection) {
+  photoSection.innerHTML = `
 
 <div class="page-content">
 
@@ -49,7 +46,9 @@ my favorite story is us.
 
 <div class="photo-wall">
 
-${photos.map(photo=>`
+${photos
+  .map(
+    (photo) => `
 
 <a href="${photo.image}"
 
@@ -63,7 +62,9 @@ class="photo-card">
 
 </a>
 
-`).join("")}
+`,
+  )
+  .join("")}
 
 </div>
 
@@ -71,79 +72,65 @@ class="photo-card">
 
 `;
 
-if(window.Fancybox){
-
+  if (window.Fancybox) {
     Fancybox.bind('[data-fancybox="gallery"]', {
+      animated: true,
 
-        animated:true,
+      dragToClose: true,
 
-        dragToClose:true,
-
-        Toolbar:{
-
-            display:["close"]
-
-        }
-
+      Toolbar: {
+        display: ["close"],
+      },
     });
-
-}
-
+  }
 }
 
 /* ==========================================
    VIDEO GALLERY
 ========================================== */
 
+const videos = [
+  {
+    src: "videos/video1.mp4",
+    thumb: "images/video1-thumb.webp",
+    title: "My woman",
+  },
 
-const videos=[
+  {
+    src: "videos/video2.mp4",
+    thumb: "images/video2-thumb.webp",
+    title: "My other half",
+  },
 
-{
-    src:"videos/video1.mp4",
-    thumb:"images/video1-thumb.webp",
-    title:"My woman"
-},
+  {
+    src: "videos/video3.mp4",
+    thumb: "images/video3-thumb.webp",
+    title: "My everything",
+  },
 
-{
-    src:"videos/video2.mp4",
-    thumb:"images/video2-thumb.webp",
-    title:"My other half"
-},
+  {
+    src: "videos/video4.mp4",
+    thumb: "images/video4-thumb.webp",
+    title: "My one and only",
+  },
 
-{
-    src:"videos/video3.mp4",
-    thumb:"images/video3-thumb.webp",
-    title:"My everything"
-},
+  {
+    src: "videos/video5.mp4",
+    thumb: "images/video5-thumb.webp",
+    title: "The love of my life",
+  },
 
-{
-    src:"videos/video4.mp4",
-    thumb:"images/video4-thumb.webp",
-    title:"My one and only"
-},
-
-{
-    src:"videos/video5.mp4",
-    thumb:"images/video5-thumb.webp",
-    title:"The love of my life"
-},
-
-{
-    src:"videos/video6.mp4",
-    thumb:"images/video6-thumb.webp",
-    title:"My ISRA"
-}
-
+  {
+    src: "videos/video6.mp4",
+    thumb: "images/video6-thumb.webp",
+    title: "My ISRA",
+  },
 ];
 
+const videoSection = document.getElementById("videos");
 
-const videoSection=document.getElementById("videos");
-
-
-if(videoSection){
-
-
-videoSection.innerHTML=`
+if (videoSection) {
+  videoSection.innerHTML = `
 
 <div class="page-content">
 
@@ -166,7 +153,9 @@ Some moments deserve to be replayed forever.
 <div class="video-wall">
 
 
-${videos.map(video=>`
+${videos
+  .map(
+    (video) => `
 
 <a
 
@@ -205,7 +194,9 @@ loading="lazy"
 
 
 
-`).join("")}
+`,
+  )
+  .join("")}
 
 
 
@@ -217,47 +208,23 @@ loading="lazy"
 
 `;
 
+  if (window.Fancybox) {
+    Fancybox.bind('[data-fancybox="videos"]', {
+      animated: true,
 
+      dragToClose: true,
 
-if(window.Fancybox){
+      Toolbar: {
+        display: ["close"],
+      },
 
+      Carousel: {
+        infinite: true,
+      },
 
-Fancybox.bind('[data-fancybox="videos"]', {
-
-
-animated:true,
-
-dragToClose:true,
-
-
-Toolbar:{
-
-
-display:["close"]
-
-},
-
-
-Carousel:{
-
-
-infinite:true
-
-},
-
-
-Html5video:{
-
-
-autoplay:true
-
-
-}
-
-
-});
-
-
-}
-
+      Html5video: {
+        autoplay: true,
+      },
+    });
+  }
 }

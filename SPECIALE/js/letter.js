@@ -2,33 +2,30 @@
    LOVE LETTER
 ========================================== */
 
-const paragraphs=[
+const paragraphs = [
+  "You came into my life when I least expected it.",
 
-"You came into my life when I least expected it.",
+  "And somehow everything became brighter.",
 
-"And somehow everything became brighter.",
+  "You make ordinary days feel extraordinary.",
 
-"You make ordinary days feel extraordinary.",
+  "You make me smile without even trying.",
 
-"You make me smile without even trying.",
+  "Thank you for believing in me.",
 
-"Thank you for believing in me.",
+  "Thank you for every laugh.",
 
-"Thank you for every laugh.",
+  "Thank you for every memory.",
 
-"Thank you for every memory.",
+  "And thank you for simply being you.",
 
-"And thank you for simply being you.",
-
-"I love you more than words could ever explain. ❤️"
-
+  "I love you more than words could ever explain. ❤️",
 ];
 
-const letter=document.getElementById("letter");
+const letter = document.getElementById("letter");
 
-if(letter){
-
-letter.innerHTML=`
+if (letter) {
+  letter.innerHTML = `
 
 <div class="page-content">
 
@@ -40,7 +37,9 @@ A Letter For You
 
 <div class="letter-container">
 
-${paragraphs.map(text=>`
+${paragraphs
+  .map(
+    (text) => `
 
 <p class="letter-line">
 
@@ -48,12 +47,13 @@ ${text}
 
 </p>
 
-`).join("")}
+`,
+  )
+  .join("")}
 
 </div>
 
 </div>
 
 `;
-
 }

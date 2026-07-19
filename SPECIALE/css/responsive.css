@@ -3,188 +3,137 @@
 ========================================== */
 
 @media (max-width: 1100px) {
+  .menu-grid {
+    grid-template-columns: 1fr;
+  }
 
-    .menu-grid {
+  .menu-card {
+    width: 100%;
 
-        grid-template-columns: 1fr;
-    }
+    max-width: 450px;
+  }
 
-
-    .menu-card {
-
-        width: 100%;
-
-        max-width: 450px;
-    }
-
-
-    h2 {
-
-        font-size: 3.8rem;
-    }
-
+  h2 {
+    font-size: 3.8rem;
+  }
 }
-
 
 /* ==========================================
    MOBILE
 ========================================== */
 
 @media (max-width: 768px) {
+  .top-bar {
+    padding: 20px;
+  }
 
-    .top-bar {
+  .logo {
+    font-size: 1.6rem;
+  }
 
-        padding: 20px;
-    }
+  .page {
+    padding: 100px 30px;
+  }
 
+  h2 {
+    font-size: 3rem;
+  }
 
-    .logo {
+  .hero-text {
+    font-size: 1rem;
+  }
 
-        font-size: 1.6rem;
-    }
+  .enter-button {
+    width: 100%;
+  }
 
+  .menu-card {
+    height: 180px;
 
-    .page {
-
-        padding: 100px 30px;
-    }
-
-
-    h2 {
-
-        font-size: 3rem;
-    }
-
-
-    .hero-text {
-
-        font-size: 1rem;
-    }
-
-
-    .enter-button {
-
-        width: 100%;
-    }
-
-
-    .menu-card {
-
-        height: 180px;
-
-        font-size: 3rem;
-    }
-
+    font-size: 3rem;
+  }
 }
-
 
 /* ==========================================
    SMALL PHONES
 ========================================== */
 
 @media (max-width: 480px) {
+  h2 {
+    font-size: 2.4rem;
+  }
 
-    h2 {
+  .hero-small {
+    font-size: 0.65rem;
+  }
 
-        font-size: 2.4rem;
-    }
+  .hero-text {
+    font-size: 0.95rem;
+  }
 
+  .menu-card {
+    height: 160px;
 
-    .hero-small {
-
-        font-size: .65rem;
-    }
-
-
-    .hero-text {
-
-        font-size: .95rem;
-    }
-
-
-    .menu-card {
-
-        height: 160px;
-
-        border-radius: 24px;
-    }
-
+    border-radius: 24px;
+  }
 }
 
 /* ==========================================
    LITTLE MOMENTS MOBILE GRID
 ========================================== */
 
-@media (max-width:768px){
+@media (max-width: 768px) {
+  .moments-wall {
+    height: auto;
 
-     .moments-wall{
+    overflow: visible;
 
-        height:auto;
+    display: grid;
 
-        overflow:visible;
+    grid-template-columns: 1fr;
 
-        display:grid;
+    gap: 25px;
 
-        grid-template-columns:1fr;
+    padding: 25px;
+  }
 
-        gap:25px;
+  .moment-card {
+    position: relative;
 
-        padding:25px;
+    width: 100%;
+    left: auto !important;
 
-    }
+    top: auto !important;
 
-    .moment-card{
-         position:relative;
+    transform: none;
+  }
 
-        width:100%;
-         left:auto !important;
+  .moment-card img,
+  .moment-card video {
+    width: 100%;
 
-        top:auto !important;
+    height: 190px;
 
-        transform:none;
-
-
-    }
-
-
-    .moment-card img,
-    .moment-card video{
-
-        
-         width:100%;
-
-        height:190px;
-
-        object-fit:cover;
-
-    }
-
+    object-fit: cover;
+  }
 }
-
 
 /* ==========================================
    MOBILE MENU ADJUSTMENTS
 ========================================== */
 
 @media (max-width: 768px) {
+  .menu-grid {
+    grid-template-columns: 1fr;
 
-    .menu-grid {
+    width: 90%;
+  }
 
-        grid-template-columns: 1fr;
+  .menu-card {
+    height: 180px;
+  }
 
-        width: 90%;
-    }
-
-
-    .menu-card {
-
-        height: 180px;
-    }
-
-
-    .page-title {
-
-        font-size: 3rem;
-    }
-
+  .page-title {
+    font-size: 3rem;
+  }
 }

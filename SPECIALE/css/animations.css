@@ -3,364 +3,233 @@
 ========================================== */
 
 .page {
-
-    transition:
-        opacity .5s ease,
-        transform .5s ease;
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease;
 }
-
 
 .fade-in {
-
-    animation: fadeIn .7s ease forwards;
+  animation: fadeIn 0.7s ease forwards;
 }
-
 
 .fade-out {
-
-    animation: fadeOut .5s ease forwards;
+  animation: fadeOut 0.5s ease forwards;
 }
-
 
 /* ==========================================
    FLOATING EFFECT
 ========================================== */
 
 .float {
-
-    animation:
-        floating 5s ease-in-out infinite;
+  animation: floating 5s ease-in-out infinite;
 }
-
 
 /* ==========================================
    SLOW BREATHING EFFECT
 ========================================== */
 
 .breathe {
-
-    animation:
-        breathe 6s ease-in-out infinite;
+  animation: breathe 6s ease-in-out infinite;
 }
-
 
 /* ==========================================
    PULSE EFFECT
 ========================================== */
 
 .pulse {
-
-    animation:
-        pulse 3s infinite;
+  animation: pulse 3s infinite;
 }
-
 
 /* ==========================================
    FADE IN
 ========================================== */
 
 @keyframes fadeIn {
+  from {
+    opacity: 0;
 
-    from {
+    transform: translateY(20px);
+  }
 
-        opacity: 0;
+  to {
+    opacity: 1;
 
-        transform: translateY(20px);
-
-    }
-
-
-    to {
-
-        opacity: 1;
-
-        transform: translateY(0);
-
-    }
-
+    transform: translateY(0);
+  }
 }
-
 
 /* ==========================================
    FADE OUT
 ========================================== */
 
 @keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
 
-    from {
-
-        opacity: 1;
-
-    }
-
-
-    to {
-
-        opacity: 0;
-
-    }
-
+  to {
+    opacity: 0;
+  }
 }
-
 
 /* ==========================================
    FLOATING ANIMATION
 ========================================== */
 
 @keyframes floating {
+  0% {
+    transform: translateY(0px);
+  }
 
-    0% {
+  50% {
+    transform: translateY(-10px);
+  }
 
-        transform: translateY(0px);
-
-    }
-
-
-    50% {
-
-        transform: translateY(-10px);
-
-    }
-
-
-    100% {
-
-        transform: translateY(0px);
-
-    }
-
+  100% {
+    transform: translateY(0px);
+  }
 }
-
 
 /* ==========================================
    BREATHING ANIMATION
 ========================================== */
 
 @keyframes breathe {
+  0% {
+    transform: scale(1);
+  }
 
-    0% {
+  50% {
+    transform: scale(1.02);
+  }
 
-        transform: scale(1);
-
-    }
-
-
-    50% {
-
-        transform: scale(1.02);
-
-    }
-
-
-    100% {
-
-        transform: scale(1);
-
-    }
-
+  100% {
+    transform: scale(1);
+  }
 }
-
 
 /* ==========================================
    PULSE ANIMATION
 ========================================== */
 
 @keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 rgba(255, 255, 255, 0);
+  }
 
-    0% {
+  50% {
+    box-shadow: 0 0 40px rgba(255, 255, 255, 0.35);
+  }
 
-        box-shadow:
-            0 0 0 rgba(255,255,255,0);
-
-    }
-
-
-    50% {
-
-        box-shadow:
-            0 0 40px rgba(255,255,255,.35);
-
-    }
-
-
-    100% {
-
-        box-shadow:
-            0 0 0 rgba(255,255,255,0);
-
-    }
-
+  100% {
+    box-shadow: 0 0 0 rgba(255, 255, 255, 0);
+  }
 }
-
 
 /* ==========================================
    FLOATING HEARTS
 ========================================== */
 
 .floating-heart {
+  position: fixed;
 
-    position: fixed;
+  bottom: -50px;
 
-    bottom: -50px;
+  color: #ff4d88;
 
-    color: #ff4d88;
+  pointer-events: none;
 
-    pointer-events: none;
+  animation: heartFloat linear forwards;
 
-    animation: heartFloat linear forwards;
+  opacity: 0.75;
 
-    opacity: .75;
+  z-index: 5;
 
-    z-index: 5;
-
-    user-select: none;
+  user-select: none;
 }
-
 
 /* ==========================================
    HEART FLOAT ANIMATION
 ========================================== */
 
 @keyframes heartFloat {
+  0% {
+    transform: translateY(0) rotate(0deg) scale(1);
 
-    0% {
+    opacity: 0;
+  }
 
-        transform:
-            translateY(0)
-            rotate(0deg)
-            scale(1);
+  20% {
+    opacity: 0.8;
+  }
 
-        opacity: 0;
+  50% {
+    transform: translateY(-60vh) rotate(180deg) scale(1.2);
+  }
 
-    }
+  100% {
+    transform: translateY(-120vh) rotate(360deg) scale(0.8);
 
-
-    20% {
-
-        opacity: .8;
-
-    }
-
-
-    50% {
-
-        transform:
-            translateY(-60vh)
-            rotate(180deg)
-            scale(1.2);
-
-    }
-
-
-    100% {
-
-        transform:
-            translateY(-120vh)
-            rotate(360deg)
-            scale(.8);
-
-        opacity: 0;
-
-    }
-
+    opacity: 0;
+  }
 }
-
 
 /* ==========================================
    QUOTE FADE
 ========================================== */
 
 #quote {
-
-    transition: .4s;
-
+  transition: 0.4s;
 }
-
 
 /* ==========================================
    LOVE COUNTER
 ========================================== */
 
 #love-counter {
+  font-size: 2rem;
 
-    font-size: 2rem;
+  line-height: 1.8;
 
-    line-height: 1.8;
+  text-align: center;
 
-    text-align: center;
+  color: white;
 
-    color: white;
-
-    font-weight: 600;
-
+  font-weight: 600;
 }
-
 
 /* ==========================================
    LITTLE MOMENTS FLOAT
 ========================================== */
 
 @keyframes floatMoment {
+  0% {
+    transform: rotate(var(--rotation)) translateY(0px);
+  }
 
-    0% {
+  50% {
+    transform: rotate(calc(var(--rotation) + 2deg)) translateY(-15px);
+  }
 
-        transform:
-            rotate(var(--rotation))
-            translateY(0px);
-
-    }
-
-
-    50% {
-
-        transform:
-            rotate(calc(var(--rotation) + 2deg))
-            translateY(-15px);
-
-    }
-
-
-    100% {
-
-        transform:
-            rotate(var(--rotation))
-            translateY(0px);
-
-    }
-
+  100% {
+    transform: rotate(var(--rotation)) translateY(0px);
+  }
 }
-
 
 /* ==========================================
    MEMORY CLOUD MOVEMENT
 ========================================== */
 
 @keyframes memoryFloat {
+  0% {
+    transform: translateY(0) rotate(-3deg);
+  }
 
-    0% {
+  50% {
+    transform: translateY(-25px) rotate(3deg);
+  }
 
-        transform:
-            translateY(0)
-            rotate(-3deg);
-
-    }
-
-
-    50% {
-
-        transform:
-            translateY(-25px)
-            rotate(3deg);
-
-    }
-
-
-    100% {
-
-        transform:
-            translateY(0)
-            rotate(-3deg);
-
-    }
-
+  100% {
+    transform: translateY(0) rotate(-3deg);
+  }
 }
