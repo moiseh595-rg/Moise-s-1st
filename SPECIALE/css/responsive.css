@@ -1,0 +1,162 @@
+/* ==========================================
+   TABLETS
+========================================== */
+
+@media (max-width: 1100px) {
+
+    .menu-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .menu-card {
+
+        width: 100%;
+
+        max-width: 450px;
+    }
+
+
+    h2 {
+
+        font-size: 3.8rem;
+    }
+
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 768px) {
+
+    .top-bar {
+
+        padding: 20px;
+    }
+
+
+    .logo {
+
+        font-size: 1.6rem;
+    }
+
+
+    .page {
+
+        padding: 100px 30px;
+    }
+
+
+    h2 {
+
+        font-size: 3rem;
+    }
+
+
+    .hero-text {
+
+        font-size: 1rem;
+    }
+
+
+    .enter-button {
+
+        width: 100%;
+    }
+
+
+    .menu-card {
+
+        height: 180px;
+
+        font-size: 3rem;
+    }
+
+}
+
+
+/* ==========================================
+   SMALL PHONES
+========================================== */
+
+@media (max-width: 480px) {
+
+    h2 {
+
+        font-size: 2.4rem;
+    }
+
+
+    .hero-small {
+
+        font-size: .65rem;
+    }
+
+
+    .hero-text {
+
+        font-size: .95rem;
+    }
+
+
+    .menu-card {
+
+        height: 160px;
+
+        border-radius: 24px;
+    }
+
+}
+
+/* ==========================================
+   LITTLE MOMENTS MOBILE GRID
+========================================== */
+
+@media (max-width:768px){
+
+    .moment-card{
+
+        width:100%;
+
+    }
+
+
+    .moment-card img,
+    .moment-card video{
+
+        height:190px;
+
+    }
+
+}
+
+
+/* ==========================================
+   MOBILE MENU ADJUSTMENTS
+========================================== */
+
+@media (max-width: 768px) {
+
+    .menu-grid {
+
+        grid-template-columns: 1fr;
+
+        width: 90%;
+    }
+
+
+    .menu-card {
+
+        height: 180px;
+    }
+
+
+    .page-title {
+
+        font-size: 3rem;
+    }
+
+}

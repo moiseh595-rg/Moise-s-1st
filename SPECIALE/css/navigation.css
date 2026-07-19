@@ -1,0 +1,122 @@
+/* ==========================================
+   TOP BAR
+========================================== */
+
+.top-bar {
+
+    position: fixed;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    padding: 30px 8%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    z-index: 500;
+}
+
+
+/* ==========================================
+   LOGO
+========================================== */
+
+.logo {
+
+    font-size: 2.2rem;
+
+    letter-spacing: .05em;
+}
+
+
+/* ==========================================
+   BACK BUTTON
+========================================== */
+
+.back-button {
+
+    opacity: 0;
+
+    pointer-events: none;
+
+    padding: 14px 28px;
+
+    border-radius: 999px;
+
+    background: rgba(255,255,255,.55);
+
+    backdrop-filter: blur(20px);
+
+    border: 1px solid rgba(255,255,255,.45);
+
+    transition: var(--transition);
+
+    box-shadow: var(--shadow);
+}
+
+
+.back-button.visible {
+
+    opacity: 1;
+
+    pointer-events: auto;
+}
+
+
+.back-button:hover {
+
+    transform: translateY(-3px);
+
+    background: white;
+}
+
+
+/* ==========================================
+   ENTER BUTTON
+========================================== */
+
+.enter-button {
+
+    margin-top: 30px;
+
+    padding: 18px 44px;
+
+    border-radius: 999px;
+
+    background: white;
+
+    border: 1px solid rgba(255,255,255,.45);
+
+    backdrop-filter: blur(18px);
+
+    box-shadow: var(--shadow);
+
+    transition: var(--transition);
+
+    font-weight: 600;
+}
+
+
+.enter-button:hover {
+
+    transform: translateY(-6px);
+
+    background: var(--accent);
+}
+
+
+/* ==========================================
+   BUTTON CURSOR
+========================================== */
+
+button {
+
+    cursor: pointer;
+}

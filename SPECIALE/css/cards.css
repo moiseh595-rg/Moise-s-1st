@@ -1,0 +1,486 @@
+/* ==========================================
+   MENU
+========================================== */
+
+.menu-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(2,320px);
+
+    gap:40px;
+
+}
+
+/* ==========================================
+   MENU CARD
+========================================== */
+
+.menu-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    height:220px;
+
+    border-radius:34px;
+
+    background:rgba(255,255,255,.58);
+
+    backdrop-filter:blur(22px);
+
+    border:1px solid rgba(255,255,255,.45);
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:18px;
+
+    font-size:4rem;
+
+    box-shadow:var(--shadow);
+
+    transition:all .45s ease;
+
+    cursor:pointer;
+
+}
+
+/* ==========================================
+   MENU TEXT
+========================================== */
+
+.menu-card span{
+
+    font-size:1.15rem;
+
+    font-weight:600;
+
+    color:var(--text);
+
+}
+
+/* ==========================================
+   HOVER
+========================================== */
+
+.menu-card:hover{
+
+    transform:
+    translateY(-12px)
+    scale(1.03);
+
+    background:white;
+
+}
+
+/* ==========================================
+   SOFT GLOW
+========================================== */
+
+.menu-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    border-radius:34px;
+
+    opacity:0;
+
+    transition:.45s;
+
+    background:
+    radial-gradient(
+    circle,
+    rgba(255,255,255,.45),
+    transparent
+    );
+
+}
+
+.menu-card:hover::before{
+
+    opacity:1;
+
+}
+
+/* ==========================================
+   ACTIVE CLICK
+========================================== */
+
+.menu-card:active{
+
+    transform:scale(.97);
+
+}
+
+/* ==========================================
+   PHOTO CARD
+========================================== */
+
+.photo-card{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:15px;
+
+    text-decoration:none;
+
+    transition:.4s;
+
+}
+
+.photo-card img{
+
+    width:100%;
+
+    height:350px;
+
+    object-fit:cover;
+
+    border-radius:24px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.photo-card p{
+
+    text-align:center;
+
+    color:var(--text);
+
+    font-size:1rem;
+
+}
+
+.photo-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+/* ==========================================
+   VIDEO CARD
+========================================== */
+
+
+.video-card{
+
+
+    position:relative;
+
+    display:block;
+
+    overflow:hidden;
+
+    border-radius:24px;
+
+    box-shadow:var(--shadow);
+
+    transition:.4s;
+
+
+}
+
+
+
+.video-card img{
+
+
+    width:100%;
+
+    height:320px;
+
+    object-fit:cover;
+
+    border-radius:24px;
+
+
+}
+
+
+
+.video-card:hover{
+
+
+    transform:
+
+    translateY(-10px)
+
+    scale(1.03);
+
+
+}
+
+
+
+/* Play button */
+
+
+.video-overlay{
+
+
+    position:absolute;
+
+
+    inset:0;
+
+
+    display:flex;
+
+
+    justify-content:center;
+
+
+    align-items:center;
+
+
+    font-size:5rem;
+
+
+    color:white;
+
+
+    background:
+
+    rgba(0,0,0,.25);
+
+
+    opacity:.9;
+
+
+    transition:.4s;
+
+
+}
+
+
+
+.video-card:hover .video-overlay{
+
+
+    background:
+
+    rgba(0,0,0,.45);
+
+
+    transform:scale(1.05);
+
+
+}
+
+/* ==========================================
+   LOVE LETTER
+========================================== */
+
+.letter-line{
+
+    font-size:1.25rem;
+
+    line-height:2;
+
+    text-align:center;
+
+    margin:30px auto;
+
+    opacity:0;
+
+    animation:fadeIn .8s forwards;
+
+}
+
+.letter-line:nth-child(2){animation-delay:.3s;}
+.letter-line:nth-child(3){animation-delay:.6s;}
+.letter-line:nth-child(4){animation-delay:.9s;}
+.letter-line:nth-child(5){animation-delay:1.2s;}
+.letter-line:nth-child(6){animation-delay:1.5s;}
+.letter-line:nth-child(7){animation-delay:1.8s;}
+.letter-line:nth-child(8){animation-delay:2.1s;}
+.letter-line:nth-child(9){animation-delay:2.4s;}
+
+/* ==========================================
+   MEMORY CARD
+========================================== */
+
+.memory-card{
+
+    padding:40px;
+
+    border-radius:28px;
+
+    background:rgba(255,255,255,.45);
+
+    backdrop-filter:blur(20px);
+
+    text-align:center;
+
+    transition:.4s;
+
+    box-shadow:var(--shadow);
+
+}
+
+.memory-card:hover{
+
+    transform:
+    translateY(-10px)
+    scale(1.03);
+
+}
+
+.memory-card h3{
+
+    font-size:2rem;
+
+    margin-bottom:20px;
+
+}
+
+.memory-card p{
+
+    font-size:1rem;
+
+    color:var(--text);
+
+}
+
+
+
+/* ==========================================
+   MUSIC BUTTON
+========================================== */
+
+.music-button{
+
+    position:fixed;
+
+    bottom:30px;
+
+    right:30px;
+
+    width:60px;
+
+    height:60px;
+
+    border-radius:50%;
+
+    border:none;
+
+    background:white;
+
+    font-size:1.5rem;
+
+    cursor:pointer;
+
+    box-shadow:var(--shadow);
+
+    transition:.4s;
+
+    z-index:100;
+
+}
+
+
+.music-button:hover{
+
+    transform:scale(1.1);
+
+}
+
+/* ==========================================
+   LITTLE MOMENTS CARDS
+========================================== */
+
+.moment-card{
+
+    position:absolute;
+
+    width:220px;
+
+    background:white;
+
+    padding:10px;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    box-shadow:
+    0 20px 50px rgba(0,0,0,.15);
+
+    transform:rotate(var(--rotation));
+
+    transition:
+    transform .45s ease,
+    box-shadow .45s ease;
+
+    pointer-events:none;
+
+    will-change:top, transform;
+
+}
+
+.moment-card img,
+.moment-card video{
+
+    display:block;
+
+    width:100%;
+
+    height:260px;
+
+    object-fit:cover;
+
+    border-radius:12px;
+
+}
+
+
+/* Hover effect (kept for future if you enable pointer events) */
+
+.moment-card:hover{
+
+    transform:
+        rotate(0deg)
+        scale(1.05);
+
+    box-shadow:
+        0 28px 60px rgba(0,0,0,.18);
+
+}
+
+
+/* Remove old floating positions */
+
+.moment-card:nth-child(n){
+
+    left:auto;
+
+    right:auto;
+
+    top:auto;
+
+    bottom:auto;
+
+}
+
+.moment-card{
+
+    backface-visibility:hidden;
+
+    transform-style:preserve-3d;
+
+}

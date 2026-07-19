@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+
+    <title>For my Panda ❤️</title>
+
+    <meta name="theme-color" content="#fff7f9">
+
+    <!-- Google Fonts -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <!-- Fancybox -->
+
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.css">
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/navigation.css">
+    <link rel="stylesheet" href="css/sections.css">
+    <link rel="stylesheet" href="css/cards.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+</head>
+
+<body>
+
+    <!-- Background Video -->
+
+    <video
+        id="background-video"
+        autoplay
+        muted
+        loop
+        playsinline>
+
+        <source
+            src="videos/bg.mp4"
+            type="video/mp4">
+
+    </video>
+
+    <div class="background-overlay"></div>
+
+    <!-- Navigation -->
+
+    <header class="top-bar">
+
+        <button
+            id="backButton"
+            class="back-button">
+
+            ← Home
+
+        </button>
+
+        <h1 class="logo">
+
+           𖣂 My Twinnie 𖣂
+
+        </h1>
+
+    </header>
+
+    <!-- HOME -->
+
+    <section
+        id="home"
+        class="page active">
+
+        <div class="hero">
+
+            <p class="hero-small">
+
+                For the girl who makes ordinary days unforgettable.
+
+            </p>
+
+            <h2>
+
+                ISRA 
+
+            </h2>
+
+            <p class="hero-text">
+
+                I built this little place
+                because words alone
+                could never explain
+                how much you mean to me.
+
+            </p>
+
+            <button
+                class="enter-button"
+                data-page="menu">
+
+                Enter
+
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- MENU -->
+
+    <section
+        id="menu"
+        class="page">
+
+        <div class="menu-grid">
+
+            <button
+                class="menu-card"
+                data-page="photos">
+
+                📷
+
+                <span>Photos</span>
+
+            </button>
+
+            <button
+                class="menu-card"
+                data-page="videos">
+
+                🎥
+
+                <span>Videos</span>
+
+            </button>
+
+            <button
+                class="menu-card"
+                data-page="letter">
+
+                💌
+
+                <span>Letter</span>
+
+            </button>
+
+            <button
+                class="menu-card"
+                data-page="moments">
+
+                ❤️
+
+                <span>Little Moments</span>
+
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- PHOTOS -->
+
+    <section
+        id="photos"
+        class="page">
+
+    </section>
+
+    <!-- VIDEOS -->
+
+    <section
+        id="videos"
+        class="page">
+
+    </section>
+
+    <!-- LETTER -->
+
+    <section
+        id="letter"
+        class="page">
+
+    </section>
+
+    <!-- MOMENTS -->
+
+    <section
+        id="moments"
+        class="page">
+
+    </section>
+
+    <!-- SECRET -->
+
+    <section
+        id="secret"
+        class="page">
+
+    </section>
+
+    <!-- LOVE COUNTER -->
+
+    <section
+        id="counter"
+        class="page">
+
+        <h2 class="page-title">
+
+            Every Second With You ❤️
+
+        </h2>
+
+        <div id="love-counter"></div>
+
+    </section>
+
+    <!-- QUOTES -->
+
+    <section
+        id="quotes"
+        class="page">
+
+        <h2 class="page-title">
+
+            Words From My Heart
+
+        </h2>
+
+        <p id="quote"></p>
+
+    </section>
+
+    <!-- MUSIC -->
+
+    <audio
+        id="music"
+        loop>
+
+        <source
+            src="music/our-song.mp3"
+            type="audio/mpeg">
+
+    </audio>
+
+    <button
+        id="musicBtn"
+        class="music-button">
+
+        ▶
+
+    </button>
+
+    <!-- Libraries -->
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.js"></script>
+
+    <script src="https://unpkg.com/split-type"></script>
+
+    <!-- JavaScript -->
+
+    <script src="js/data.js"></script>
+
+    <script src="js/gallery.js"></script>
+
+    <script src="js/letter.js"></script>
+
+    <script src="js/moments.js"></script>
+    
+    <script src="js/music.js"></script>
+    
+    <script src="js/app.js"></script>
+
+    <script src="js/animations.js"></script>
+
+    <script src="js/effects.js"></script>
+    
+
+</body>
+
+</html>
