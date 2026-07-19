@@ -1,0 +1,27 @@
+:root{
+
+--background:#fff8fa;
+
+--surface:rgba(255,255,255,.62);
+
+--surface-border:rgba(255,255,255,.40);
+
+--text:#313131;
+
+--muted:#8e7b83;
+
+--accent:#e8b6c3;
+
+--accent-dark:#d991a5;
+
+--shadow:0 25px 60px rgba(0,0,0,.08);
+
+--radius:30px;
+
+--transition:.35s cubic-bezier(.22,.61,.36,1);
+
+--font-title:"Cormorant Garamond",serif;
+
+--font-body:"Inter",sans-serif;
+
+}
