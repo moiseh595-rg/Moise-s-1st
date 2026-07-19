@@ -1,445 +1,162 @@
 /* ==========================================
-   RESPONSIVE DESIGN
+   TABLETS
 ========================================== */
 
+@media (max-width: 1100px) {
 
-/* LARGE TABLETS / SMALL LAPTOPS
-   1024px and below
-========================================== */
+    .menu-grid {
 
-@media (max-width:1024px){
-
-
-    .page{
-
-        padding:80px 50px;
-
+        grid-template-columns: 1fr;
     }
 
 
-    .page-title{
+    .menu-card {
 
-        font-size:3.5rem;
+        width: 100%;
 
+        max-width: 450px;
     }
 
 
-    h2{
+    h2 {
 
-        font-size:4rem;
-
+        font-size: 3.8rem;
     }
 
-
-    .menu-grid{
-    grid-template-columns:repeat(2,minmax(220px,300px));
 }
 
 
-    .menu-card{
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 768px) {
+
+    .top-bar {
+
+        padding: 20px;
+    }
+
+
+    .logo {
+
+        font-size: 1.6rem;
+    }
+
+
+    .page {
+
+        padding: 100px 30px;
+    }
+
+
+    h2 {
+
+        font-size: 3rem;
+    }
+
+
+    .hero-text {
+
+        font-size: 1rem;
+    }
+
+
+    .enter-button {
+
+        width: 100%;
+    }
+
+
+    .menu-card {
+
+        height: 180px;
+
+        font-size: 3rem;
+    }
+
+}
+
+
+/* ==========================================
+   SMALL PHONES
+========================================== */
+
+@media (max-width: 480px) {
+
+    h2 {
+
+        font-size: 2.4rem;
+    }
+
+
+    .hero-small {
+
+        font-size: .65rem;
+    }
+
+
+    .hero-text {
+
+        font-size: .95rem;
+    }
+
+
+    .menu-card {
+
+        height: 160px;
+
+        border-radius: 24px;
+    }
+
+}
+
+/* ==========================================
+   LITTLE MOMENTS MOBILE GRID
+========================================== */
+
+@media (max-width:768px){
+
+    .moment-card{
+
+        width:100%;
+
+    }
+
+
+    .moment-card img,
+    .moment-card video{
 
         height:190px;
 
     }
 
-
-    .moments-wall{
-
-        max-width:900px;
-
-        height:650px;
-
-    }
-
-
-    .moment-card{
-
-        width:190px;
-
-    }
-
-
-    .moment-card img,
-    .moment-card video{
-
-        height:220px;
-
-    }
-
 }
 
-
-
-/* TABLETS
-   768px and below
-========================================== */
-
-
-@media (max-width:768px){
-
-
-    .top-bar{
-
-        padding:20px 25px;
-
-    }
-
-
-    .logo{
-
-        font-size:1.6rem;
-
-    }
-
-
-    .page{
-
-        padding:90px 25px;
-
-    }
-
-
-    .hero{
-
-        max-width:90%;
-
-    }
-
-
-    .hero h2{
-
-        font-size:3rem;
-
-    }
-
-
-    .hero-text{
-
-        font-size:1rem;
-
-    }
-
-
-    .menu-grid{
-
-        grid-template-columns:1fr;
-
-        width:100%;
-
-        max-width:350px;
-
-        gap:20px;
-
-    }
-
-
-    .menu-card{
-
-        width:100%;
-
-        height:170px;
-
-        font-size:3rem;
-
-    }
-
-
-    .page-title{
-
-        font-size:3rem;
-
-    }
-
-
-    .letter-line{
-
-        font-size:1rem;
-
-        margin:20px auto;
-
-    }
-
-
-    .photo-wall,
-    .video-wall{
-
-        grid-template-columns:1fr;
-
-    }
-
-
-    .moments-wall{
-
-        height:550px;
-
-        padding:20px;
-
-    }
-
-
-    .moment-card{
-
-        width:150px;
-
-    }
-
-
-    .moment-card img,
-    .moment-card video{
-
-        height:180px;
-
-    }
-
-
-    .music-button{
-
-        width:50px;
-
-        height:50px;
-
-        right:20px;
-
-        bottom:20px;
-
-    }
-
-
-}
-
-
-
-
-/* PHONES
-   480px and below
-========================================== */
-
-
-@media (max-width:480px), (max-height:650px){
-
-    .top-bar{
-
-        flex-direction:column;
-
-        gap:10px;
-
-    }
-
-
-    .logo{
-
-        font-size:1.3rem;
-
-    }
-
-
-    .back-button{
-
-        padding:10px 20px;
-
-    }
-
-
-    .page{
-
-        padding:100px 15px;
-
-    }
-
-
-    .hero-small{
-
-        font-size:.65rem;
-
-        letter-spacing:.2em;
-
-    }
-
-
-    .hero h2{
-
-        font-size:2.5rem;
-
-    }
-
-
-    .hero-text{
-
-        font-size:.9rem;
-
-        line-height:1.6;
-
-    }
-
-
-    .enter-button{
-
-        padding:15px 35px;
-
-    }
-
-
-    .page-title{
-
-        font-size:2.4rem;
-
-    }
-
-
-    .menu-card{
-
-        height:150px;
-
-        font-size:2.5rem;
-
-    }
-
-
-    .moments-wall{
-
-        height:450px;
-
-    }
-
-
-    .moment-card{
-
-        width:120px;
-
-    }
-
-
-    .moment-card img,
-    .moment-card video{
-
-        height:150px;
-
-    }
-
-
-    #love-counter{
-
-        font-size:1.3rem;
-
-    }
-
-}
 
 /* ==========================================
-   MOBILE SCROLL SUPPORT
+   MOBILE MENU ADJUSTMENTS
 ========================================== */
 
-@media (max-width:1024px), (max-height:850px){
+@media (max-width: 768px) {
 
-    html,
-    body{
-        overflow-y:auto;
-        height:auto;
-        min-height:100vh;
-    }
-    .menu-grid{
+    .menu-grid {
 
-        padding-top:50px;
+        grid-template-columns: 1fr;
 
-        padding-bottom:100px;
-
-    }
-
-}
-
-/* ==========================================
-   COMPLETE MOBILE WEBSITE SCROLL SYSTEM
-========================================== */
-
-@media (max-width:768px), (max-height:850px){
-
-
-    html{
-
-        overflow-y:auto;
-
-        height:auto;
-
+        width: 90%;
     }
 
 
-    body{
+    .menu-card {
 
-        overflow-x:hidden;
-    overflow-y:auto;
-    height:auto;
-    min-height:100vh;
-
+        height: 180px;
     }
 
 
-    .page{
-    position:relative;
-    min-height:100vh;
-    height:auto;
-    overflow-y:visible;
+    .page-title {
 
-        padding-top:100px;
-
-        padding-bottom:120px;
-
-    }
-
-
-    .page.active{
-
-        overflow-y:auto;
-
-    }
-
-
-    .page-content{
-
-        min-height:auto;
-
-    }
-
-
-    .photo-wall,
-    .video-wall{
-
-        padding-bottom:80px;
-
-    }
-
-
-    .letter-container{
-
-        padding-bottom:100px;
-
-    }
-
-
-   .moments-wall{
-
-    overflow-x:auto;
-    overflow-y:auto;
-
-    height:70vh;
-
-}
-
-}
-
-/* ==========================================
-   SHORT SCREEN LAPTOP SUPPORT
-========================================== */
-
-@media (max-height:850px){
-
-    .page{
-
-        justify-content:flex-start;
-
-        padding-top:100px;
-
-        padding-bottom:120px;
-
+        font-size: 3rem;
     }
 
 }
