@@ -6,10 +6,9 @@
 
     display:grid;
 
-    grid-template-columns:
-    repeat(auto-fit,minmax(250px,320px));
-
-    justify-content:center;
+   grid-template-columns:
+   repeat(auto-fit,minmax(250px,320px));
+   justify-content:center;
 
     gap:40px;
 

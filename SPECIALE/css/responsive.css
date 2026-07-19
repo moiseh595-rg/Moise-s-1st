@@ -32,8 +32,13 @@
 
 
     .menu-grid{
-    grid-template-columns:repeat(2,minmax(220px,300px));
-}
+
+        grid-template-columns:
+        repeat(2,250px);
+
+        gap:25px;
+
+    }
 
 
     .menu-card{
@@ -215,7 +220,8 @@
 ========================================== */
 
 
-@media (max-width:480px), (max-height:650px){
+@media(max-width:480px){
+
 
     .top-bar{
 
@@ -320,125 +326,6 @@
     #love-counter{
 
         font-size:1.3rem;
-
-    }
-
-}
-
-/* ==========================================
-   MOBILE SCROLL SUPPORT
-========================================== */
-
-@media (max-width:1024px), (max-height:850px){
-
-    html,
-    body{
-        overflow-y:auto;
-        height:auto;
-        min-height:100vh;
-    }
-    .menu-grid{
-
-        padding-top:50px;
-
-        padding-bottom:100px;
-
-    }
-
-}
-
-/* ==========================================
-   COMPLETE MOBILE WEBSITE SCROLL SYSTEM
-========================================== */
-
-@media (max-width:768px), (max-height:850px){
-
-
-    html{
-
-        overflow-y:auto;
-
-        height:auto;
-
-    }
-
-
-    body{
-
-        overflow-x:hidden;
-    overflow-y:auto;
-    height:auto;
-    min-height:100vh;
-
-    }
-
-
-    .page{
-    position:relative;
-    min-height:100vh;
-    height:auto;
-    overflow-y:visible;
-
-        padding-top:100px;
-
-        padding-bottom:120px;
-
-    }
-
-
-    .page.active{
-
-        overflow-y:auto;
-
-    }
-
-
-    .page-content{
-
-        min-height:auto;
-
-    }
-
-
-    .photo-wall,
-    .video-wall{
-
-        padding-bottom:80px;
-
-    }
-
-
-    .letter-container{
-
-        padding-bottom:100px;
-
-    }
-
-
-   .moments-wall{
-
-    overflow-x:auto;
-    overflow-y:auto;
-
-    height:70vh;
-
-}
-
-}
-
-/* ==========================================
-   SHORT SCREEN LAPTOP SUPPORT
-========================================== */
-
-@media (max-height:850px){
-
-    .page{
-
-        justify-content:flex-start;
-
-        padding-top:100px;
-
-        padding-bottom:120px;
 
     }
 
