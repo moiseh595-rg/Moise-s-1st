@@ -6,8 +6,9 @@
 
     display:grid;
 
-    grid-template-columns:
-    repeat(2,320px);
+   grid-template-columns:
+   repeat(auto-fit,minmax(250px,320px));
+   justify-content:center;
 
     gap:40px;
 
@@ -408,7 +409,7 @@
 
     position:absolute;
 
-    width:220px;
+    width:clamp(120px,18vw,220px);
 
     background:white;
 
@@ -440,7 +441,7 @@
 
     width:100%;
 
-    height:260px;
+   height:clamp(150px,22vw,260px);
 
     object-fit:cover;
 
