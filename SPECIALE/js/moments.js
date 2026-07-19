@@ -71,7 +71,7 @@ if(momentsSection){
 
                 <div class="moment-card"
 
-                style="--delay:${index}; --rotation:0deg;
+                style="--delay:${index}; --rotation:0deg;">
 
                     <video
                         autoplay
@@ -109,6 +109,33 @@ const wall = document.querySelector(".moments-wall");
 if (wall) {
 
     const cards = [...wall.querySelectorAll(".moment-card")];
+
+    /* ==========================================
+       MOBILE MODE
+    ========================================== */
+
+    if(window.innerWidth <= 768){
+
+        cards.forEach(card=>{
+
+            card.style.position="relative";
+
+            card.style.left="auto";
+
+            card.style.top="auto";
+
+            card.style.transform="none";
+
+        });
+
+
+        wall.style.height="auto";
+
+
+        return;
+
+    }
+
 
     const columns = [
 
