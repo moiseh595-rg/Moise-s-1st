@@ -69,26 +69,26 @@ if(momentsSection){
 
                 return `
 
-                <div class="moment-card"
+<div class="moment-card"
 
-                style="--delay:${index}; --rotation:0deg;
+style="--delay:${index}; --rotation:0deg;">
 
-                    <video
-                        autoplay
-                        muted
-                        loop
-                        playsinline
-                        preload="none">
+    <video
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="none">
 
-                        <source
-                            src="${item.src}"
-                            type="video/mp4">
+        <source
+            src="${item.src}"
+            type="video/mp4">
 
-                    </video>
+    </video>
 
-                </div>
+</div>
 
-                `;
+`;
 
             }).join("")}
 
@@ -119,12 +119,10 @@ if (wall) {
 
     ];
 
-    const CARD_HEIGHT = 300;
+   const CARD_HEIGHT = window.innerWidth < 600 ? 180 : 300;
    const START_X = window.innerWidth < 600 ? 20 : 70;
-
-const COLUMN_GAP = window.innerWidth < 600 ? 150 : 270;
-
-const START_Y = 40;
+   const COLUMN_GAP = window.innerWidth < 600 ? 125 : 270;
+   const START_Y = 40;
 
     columns.forEach((indexes, columnIndex) => {
 
