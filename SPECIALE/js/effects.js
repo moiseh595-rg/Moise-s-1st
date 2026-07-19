@@ -1,3 +1,4 @@
+
 /* ==========================================
    FLOATING HEARTS
 ========================================== */
@@ -45,35 +46,3 @@ window.addEventListener("mousemove",e=>{
     `${e.clientX/40}px ${e.clientY/40}px`;
 
 });
-
-/* ==========================================
-   MUSIC BUTTON
-========================================== */
-
-const music=document.getElementById("music");
-
-const musicBtn=document.getElementById("musicBtn");
-
-if(musicBtn){
-
-musicBtn.onclick=()=>{
-
-    if(music.paused){
-
-        music.play();
-
-        musicBtn.innerHTML="⏸";
-
-    }
-
-    else{
-
-        music.pause();
-
-        musicBtn.innerHTML="▶";
-
-    }
-
-};
-
-}

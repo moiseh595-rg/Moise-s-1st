@@ -131,10 +131,8 @@ if (wall) {
 
         wall.style.height="auto";
 
-
-        return;
-
     }
+    else {
 
 
     const columns = [
@@ -229,4 +227,5 @@ if (wall) {
 
     });
 
+}
 }
