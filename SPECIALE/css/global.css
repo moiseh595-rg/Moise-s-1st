@@ -90,12 +90,20 @@ body{
 
     display: flex;
 
-    justify-content: center;
+    justify-content:flex-start;
 
-    align-items:flex-start;
+    align-items:center;
 
-     padding:120px 5vw 60px;
+    flex-direction:column;
+
+     padding:
+     clamp(90px,10vw,120px)
+     clamp(20px,5vw,60px)
+     60px;
+
+
      overflow-y:auto;
+      overflow-x:hidden;
 
 
     opacity: 0;
